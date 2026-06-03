@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乔鸿 - 创意数字工作室</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">乔<span>鸿</span></a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#about" class="nav-link">关于</a></li>
+                <li><a href="#services" class="nav-link">服务</a></li>
+                <li><a href="#works" class="nav-link">作品</a></li>
+                <li><a href="#interact" class="nav-link">互动</a></li>
+                <li><a href="#contact" class="nav-link">联系</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页英雄区 -->
+    <section class="hero" id="home">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-char" style="--i:0">乔</span>
+                <span class="title-char" style="--i:1">鸿</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span id="typingText"></span><span class="cursor">|</span>
+            </p>
+            <p class="hero-desc">融合创意与科技，打造卓越数字体验</p>
+            <div class="hero-btns">
+                <a href="#about" class="btn btn-primary">探索更多</a>
+                <a href="#contact" class="btn btn-outline">联系乔鸿</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"><div class="wheel"></div></div>
+            <span>向下滚动</span>
+        </div>
+    </section>
+
+    <!-- 关于 -->
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="section-title reveal">关于<span>乔鸿</span></h2>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h3>以创意之名，铸非凡之作</h3>
+                    <p>乔鸿是一家专注于品牌设计与数字创新的创意工作室。我们相信，每一个品牌都有独特的故事等待被讲述。</p>
+                    <p>从品牌策略到视觉设计，从网站开发到数字营销，乔鸿以极致的匠心精神和前沿的技术视野，为企业打造令人难忘的品牌体验。</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="150">0</span><span>+</span>
+                            <p>成功项目</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="50">0</span><span>+</span>
+                            <p>合作客户</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <p>年经验</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual reveal">
+                    <div class="about-card">
+                        <div class="card-icon">&#x2728;</div>
+                        <h4>品牌策略</h4>
+                        <p>深度洞察，精准定位</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">&#x1F3A8;</div>
+                        <h4>创意设计</h4>
+                        <p>视觉美学，独树一帜</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">&#x1F4BB;</div>
+                        <h4>技术开发</h4>
+                        <p>前沿技术，极致体验</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">&#x1F680;</div>
+                        <h4>增长赋能</h4>
+                        <p>数据驱动，持续进化</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务 -->
+    <section class="services section" id="services">
+        <div class="container">
+            <h2 class="section-title reveal">核心<span>服务</span></h2>
+            <div class="services-grid">
+                <div class="service-card reveal" data-tilt>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="64" height="64">
+                            <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="176" stroke-dashoffset="0"/>
+                            <text x="32" y="38" text-anchor="middle" fill="currentColor" font-size="20" font-weight="700">UI</text>
+                        </svg>
+                    </div>
+                    <h3>品牌形象设计</h3>
+                    <p>从LOGO到VI体系，打造统一而独特的品牌视觉语言，让您的品牌在竞争中脱颖而出。</p>
+                    <ul class="service-features">
+                        <li>品牌标志设计</li>
+                        <li>视觉识别系统</li>
+                        <li>品牌规范手册</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal" data-tilt>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="64" height="64">
+                            <rect x="10" y="10" width="44" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <line x1="18" y1="38" x2="46" y2="38" stroke="currentColor" stroke-width="2"/>
+                            <line x1="18" y1="44" x2="38" y2="44" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="32" cy="24" r="6" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>网站定制开发</h3>
+                    <p>响应式网站、Web应用、电商平台，以前沿技术栈打造流畅的数字产品体验。</p>
+                    <ul class="service-features">
+                        <li>企业官网定制</li>
+                        <li>Web应用开发</li>
+                        <li>电商平台搭建</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal" data-tilt>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="64" height="64">
+                            <rect x="14" y="8" width="36" height="48" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="32" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="32" cy="38" r="3" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>移动应用设计</h3>
+                    <p>iOS与Android原生应用设计，注重用户体验与交互细节，让每个触控都精准优雅。</p>
+                    <ul class="service-features">
+                        <li>App UI/UX设计</li>
+                        <li>小程序开发</li>
+                        <li>跨平台解决方案</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品展示 -->
+    <section class="works section" id="works">
+        <div class="container">
+            <h2 class="section-title reveal">精选<span>作品</span></h2>
+            <div class="works-filter reveal">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="brand">品牌设计</button>
+                <button class="filter-btn" data-filter="web">网站开发</button>
+                <button class="filter-btn" data-filter="app">移动应用</button>
+            </div>
+            <div class="works-grid">
+                <div class="work-item reveal" data-category="brand">
+                    <div class="work-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span class="work-placeholder">&#x1F3A8;</span>
+                    </div>
+                    <div class="work-overlay">
+                        <h4>乔鸿品牌全案</h4>
+                        <p>品牌策略 / VI设计</p>
+                    </div>
+                </div>
+                <div class="work-item reveal" data-category="web">
+                    <div class="work-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <span class="work-placeholder">&#x1F310;</span>
+                    </div>
+                    <div class="work-overlay">
+                        <h4>云端SaaS平台</h4>
+                        <p>Web应用 / 后台系统</p>
+                    </div>
+                </div>
+                <div class="work-item reveal" data-category="app">
+                    <div class="work-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <span class="work-placeholder">&#x1F4F1;</span>
+                    </div>
+                    <div class="work-overlay">
+                        <h4>智慧生活App</h4>
+                        <p>iOS / Android</p>
+                    </div>
+                </div>
+                <div class="work-item reveal" data-category="brand">
+                    <div class="work-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <span class="work-placeholder">&#x2728;</span>
+                    </div>
+                    <div class="work-overlay">
+                        <h4>新消费品牌升级</h4>
+                        <p>品牌定位 / 包装设计</p>
+                    </div>
+                </div>
+                <div class="work-item reveal" data-category="web">
+                    <div class="work-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <span class="work-placeholder">&#x1F4BB;</span>
+                    </div>
+                    <div class="work-overlay">
+                        <h4>电商旗舰站</h4>
+                        <p>Shopify / 定制开发</p>
+                    </div>
+                </div>
+                <div class="work-item reveal" data-category="app">
+                    <div class="work-image" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+                        <span class="work-placeholder">&#x1F3AE;</span>
+                    </div>
+                    <div class="work-overlay">
+                        <h4>互动社区小程序</h4>
+                        <p>微信小程序</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 互动体验区 -->
+    <section class="interact section" id="interact">
+        <div class="container">
+            <h2 class="section-title reveal">互动<span>体验</span></h2>
+            <p class="section-desc reveal">来和乔鸿一起玩几个有趣的互动吧</p>
+            <div class="interact-grid">
+                <!-- 乔鸿箴言生成器 -->
+                <div class="interact-card reveal">
+                    <div class="interact-card-inner">
+                        <h3>&#x1F52E; 乔鸿箴言</h3>
+                        <p>点击按钮，获取来自乔鸿的智慧箴言</p>
+                        <div class="quote-box" id="quoteBox">
+                            <p class="quote-text" id="quoteText">鸿鹄之志，乔木之基</p>
+                            <p class="quote-author" id="quoteAuthor">—— 乔鸿</p>
+                        </div>
+                        <button class="btn btn-primary" id="generateQuote">生成箴言</button>
+                    </div>
+                </div>
+
+                <!-- 色彩性格测试 -->
+                <div class="interact-card reveal">
+                    <div class="interact-card-inner">
+                        <h3>&#x1F3A8; 乔鸿色彩</h3>
+                        <p>选择你喜欢的颜色，看看你的创意性格</p>
+                        <div class="color-picker" id="colorPicker">
+                            <button class="color-dot" style="background:#667eea" data-color="蓝紫"></button>
+                            <button class="color-dot" style="background:#f5576c" data-color="玫红"></button>
+                            <button class="color-dot" style="background:#43e97b" data-color="翠绿"></button>
+                            <button class="color-dot" style="background:#f5a623" data-color="暖橙"></button>
+                            <button class="color-dot" style="background:#50e3c2" data-color="青碧"></button>
+                        </div>
+                        <div class="color-result" id="colorResult">
+                            <p>选择一种颜色来发现你的创意性格</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 点赞乔鸿 -->
+                <div class="interact-card reveal">
+                    <div class="interact-card-inner">
+                        <h3>&#x2764;&#xFE0F; 为乔鸿点赞</h3>
+                        <p>如果你喜欢乔鸿的设计理念，请为我们点赞</p>
+                        <button class="like-btn" id="likeBtn">
+                            <span class="heart">&#x2764;&#xFE0F;</span>
+                            <span class="like-count" id="likeCount">0</span>
+                        </button>
+                        <div class="like-animation" id="likeAnimation"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系 -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">联系<span>乔鸿</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>让我们一起创造非凡</h3>
+                    <p>无论您有任何品牌创意需求，乔鸿都期待与您深入交流。</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">&#x1F4E7;</span>
+                            <div>
+                                <h5>电子邮箱</h5>
+                                <p>hello@qiaohong.design</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">&#x1F4CD;</span>
+                            <div>
+                                <h5>工作室地址</h5>
+                                <p>中国 · 深圳</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">&#x1F4F1;</span>
+                            <div>
+                                <h5>联系电话</h5>
+                                <p>+86 400-乔鸿-001</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form reveal">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="您的姓名" required>
+                            <label for="name">姓名</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="您的邮箱" required>
+                            <label for="email">邮箱</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" required>
+                                <option value="">选择服务类型</option>
+                                <option value="brand">品牌形象设计</option>
+                                <option value="web">网站定制开发</option>
+                                <option value="app">移动应用设计</option>
+                                <option value="other">其他咨询</option>
+                            </select>
+                            <label for="service">服务类型</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder="请描述您的需求" required></textarea>
+                            <label for="message">需求描述</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span class="btn-text">发送消息</span>
+                            <span class="btn-loading" style="display:none;">发送中...</span>
+                        </button>
+                    </form>
+                    <div class="form-success" id="formSuccess" style="display:none;">
+                        <span>&#x2705;</span>
+                        <h4>消息已发送！</h4>
+                        <p>感谢您联系乔鸿，我们将在24小时内回复。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">乔<span>鸿</span></a>
+                    <p>创意数字工作室 · 让品牌闪耀光芒</p>
+                </div>
+                <div class="footer-links">
+                    <h5>快速导航</h5>
+                    <ul>
+                        <li><a href="#about">关于乔鸿</a></li>
+                        <li><a href="#services">核心服务</a></li>
+                        <li><a href="#works">精选作品</a></li>
+                        <li><a href="#contact">联系合作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h5>关注乔鸿</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="微信">&#x1F4AC;</a>
+                        <a href="#" class="social-icon" title="微博">&#x1F4E2;</a>
+                        <a href="#" class="social-icon" title="站酷">&#x1F3A8;</a>
+                        <a href="#" class="social-icon" title="GitHub">&#x1F4BB;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 <strong>乔鸿</strong> QiaoHong Creative Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
