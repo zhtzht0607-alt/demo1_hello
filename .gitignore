@@ -12,6 +12,7 @@ target/
 *.iws
 *.iml
 *.ipr
+.idea/claudeCodeTabState.xml
 
 ### Eclipse ###
 .apt_generated
